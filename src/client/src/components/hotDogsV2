@@ -1,0 +1,52 @@
+import React  from 'react';
+import  Card  from './Hcard';
+import { Container, Col, Row} from 'react-bootstrap';
+import {useSelector } from 'react-redux';
+
+import hotDogsReduser from "../redusers/hotDogsReduser";
+
+const hotDogsV2 = (props)=> {
+    console.log(props);
+    const HotDogs = useSelector(state => state.hotDogsReduser.HotDogs);
+
+    return (
+        <div className="container">
+            <Container>
+
+
+                <Row className="my-3">
+                    <Col className="mx-1">
+                        <Card />
+                    </Col>
+                    <Col className="mx-1">
+                        <Card />
+                    </Col>
+                    <Col className="mx-1">
+                        <Card />
+                    </Col>
+                    <Col className="mx-1">
+                        <Card/>
+                    </Col>
+                </Row>
+                <Row className="my-3">
+                    <Col className="mx-1">
+                        <Card />
+                    </Col>
+                    <Col className="mx-1">
+                        <Card />
+                    </Col>
+                    <Col className="mx-1">
+                        <Card />
+                    </Col>
+                    <Col className="mx-1">
+                        <Card />
+                    </Col>
+                </Row>
+            </Container>
+
+        </div>
+    );
+}
+
+
+export default hotDogsV2;
